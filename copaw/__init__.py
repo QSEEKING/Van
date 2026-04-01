@@ -3,6 +3,6 @@
 __version__ = "0.1.0"
 __author__ = "CoPaw Team"
 
-from copaw.cli import cli
+from copaw.entrypoint import cli
 
 __all__ = ["cli", "__version__"]

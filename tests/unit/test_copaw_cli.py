@@ -19,7 +19,7 @@ class TestCLI:
 
     def test_cli_version(self, runner):
         """CLI should show version."""
-        from copaw.cli import cli
+        from copaw.entrypoint import cli
 
         result = runner.invoke(cli, ["--version"])
         assert result.exit_code == 0
@@ -27,7 +27,7 @@ class TestCLI:
 
     def test_cli_help(self, runner):
         """CLI should show help."""
-        from copaw.cli import cli
+        from copaw.entrypoint import cli
 
         result = runner.invoke(cli, ["--help"])
         assert result.exit_code == 0
@@ -39,7 +39,7 @@ class TestVersionCommand:
 
     def test_version_shows_version(self, runner):
         """Version command should show version."""
-        from copaw.cli import cli
+        from copaw.entrypoint import cli
 
         result = runner.invoke(cli, ["version"])
         assert result.exit_code == 0
@@ -51,7 +51,7 @@ class TestConfigCommand:
 
     def test_config_shows_config(self, runner):
         """Config command should show configuration."""
-        from copaw.cli import cli
+        from copaw.entrypoint import cli
 
         result = runner.invoke(cli, ["config"])
         assert result.exit_code == 0
@@ -63,7 +63,7 @@ class TestShellCommand:
 
     def test_shell_starts(self, runner):
         """Shell command should start."""
-        from copaw.cli import cli
+        from copaw.entrypoint import cli
 
         result = runner.invoke(cli, ["shell"])
         assert result.exit_code == 0
@@ -75,7 +75,7 @@ class TestRunCommand:
 
     def test_run_with_prompt(self, runner):
         """Run command should process prompt."""
-        from copaw.cli import cli
+        from copaw.entrypoint import cli
 
         result = runner.invoke(cli, ["run", "test prompt"])
         assert result.exit_code == 0
@@ -87,7 +87,7 @@ class TestAPICommand:
 
     def test_api_help(self, runner):
         """API command should show help."""
-        from copaw.cli import cli
+        from copaw.entrypoint import cli
 
         result = runner.invoke(cli, ["api", "--help"])
         assert result.exit_code == 0
