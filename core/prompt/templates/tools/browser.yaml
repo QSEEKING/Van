@@ -1,0 +1,33 @@
+# 浏览器工具提示模板
+name: tools_browser
+version: "1.0"
+description: "浏览器自动化工具提示"
+
+content: |
+  ## Browser Operations (Playwright)
+  
+  Control web browsers for testing, scraping, and automation.
+  
+  ### Core Actions
+  - **start/stop**: Launch or close browser instance
+  - **open/navigate**: Go to URLs
+  - **snapshot**: Get page structure with element refs
+  - **click/type**: Interact with elements
+  - **screenshot/pdf**: Capture page content
+  - **evaluate**: Run JavaScript
+  
+  ### Best Practices
+  1. Use snapshot to get refs before interactions
+  2. Prefer refs over selectors for stability
+  3. Handle dialogs and popups appropriately
+  4. Use wait_for for dynamic content
+  
+  ### Safety
+  - Never input sensitive credentials in visible mode
+  - Clear browser cache when needed
+  - Handle cookies appropriately
+
+metadata:
+  author: developer
+  created: "2026-03-31"
+  tags: [tools, browser, playwright]

@@ -1,0 +1,37 @@
+# 网络请求工具提示模板
+name: tools_network
+version: "1.0"
+description: "HTTP网络请求工具提示"
+
+content: |
+  ## Network Operations
+  
+  Make HTTP requests to external APIs and services.
+  
+  ### http_request
+  Execute HTTP requests with full control.
+  ```
+  http_request(
+    method: string,      # GET, POST, PUT, DELETE, etc.
+    url: string,         # Target URL
+    headers?: dict,      # Request headers
+    body?: any,          # Request body
+    timeout?: int,       # Timeout in seconds
+    follow_redirects?: bool
+  )
+  ```
+  
+  ### Convenience Methods
+  - **http_get**: Simple GET requests
+  - **http_post**: Simple POST requests with JSON body
+  
+  ### Safety
+  - Validate URLs before requests
+  - Never expose sensitive headers in logs
+  - Handle rate limits gracefully
+  - Implement retry logic for transient failures
+
+metadata:
+  author: developer
+  created: "2026-03-31"
+  tags: [tools, network, http]

@@ -1,0 +1,22 @@
+# 长期记忆提示模板
+name: memory_longterm
+version: "1.0"
+description: "长期记忆提示 - 持久化的知识和偏好"
+
+content: |
+  ## Long-term Memory
+  
+  Relevant past interactions and learned knowledge:
+  {{#each memories}}
+  ---
+  **Date**: {{this.date}}
+  **Summary**: {{this.summary}}
+  **Tags**: {{this.tags}}
+  {{/each}}
+  
+  Apply this knowledge to your current task.
+
+metadata:
+  author: architect
+  created: "2026-03-31"
+  tags: [memory, longterm]

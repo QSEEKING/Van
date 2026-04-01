@@ -1,0 +1,26 @@
+# Shell工具提示模板
+name: tools_shell
+version: "1.0"
+description: "Shell命令执行工具提示"
+
+content: |
+  ## Shell Operations
+  
+  ### execute_shell_command
+  Execute shell commands. Always validate commands before execution.
+  
+  **Safety Rules:**
+  - Never run commands that modify system files
+  - Use absolute paths when possible
+  - Check command effects with dry-run first
+  
+  **Timeout:** Default 30 seconds, configurable per command.
+  
+  **Platform Support:**
+  - Windows: cmd.exe
+  - Linux/macOS: /bin/sh or /bin/bash
+
+metadata:
+  author: architect
+  created: "2026-03-31"
+  tags: [tools, shell]

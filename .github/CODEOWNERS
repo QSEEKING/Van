@@ -1,0 +1,47 @@
+# CODEOWNERS - Define code ownership for PR reviews
+# https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Default owners for everything in the repo
+* @copaw-team/maintainers
+
+# Core components
+/core/ @copaw-team/core-devs
+/core/agent/ @copaw-team/agent-devs
+/core/llm/ @copaw-team/llm-devs
+
+# Tools
+/tools/ @copaw-team/tools-devs
+
+# Security - requires extra review
+/security/ @copaw-team/security-team @copaw-team/maintainers
+
+# Storage
+/storage/ @copaw-team/storage-devs
+
+# CLI
+/cli/ @copaw-team/cli-devs
+
+# API
+/api/ @copaw-team/api-devs
+
+# Tests
+/tests/ @copaw-team/qa-team
+
+# Documentation
+/docs/ @copaw-team/docs-team
+*.md @copaw-team/docs-team
+LICENSE @copaw-team/maintainers
+CONTRIBUTING.md @copaw-team/maintainers
+SECURITY.md @copaw-team/security-team
+
+# CI/CD
+/.github/ @copaw-team/devops-team
+/Dockerfile @copaw-team/devops-team
+/docker-compose.yml @copaw-team/devops-team
+/Makefile @copaw-team/devops-team
+
+# Configuration
+/config/ @copaw-team/core-devs
+/pyproject.toml @copaw-team/maintainers
+/mypy.ini @copaw-team/core-devs
+/.pre-commit-config.yaml @copaw-team/devops-team
